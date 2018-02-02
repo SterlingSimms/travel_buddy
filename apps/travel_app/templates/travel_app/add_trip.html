@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Trip</title>
+</head>
+<body>
+    <div class=top-right>
+        <a href="/schedule">Home</a>
+        <a href="/">Logout</a>
+    </div>
+    <h2>Add a Trip</h2>
+    <form action="/schedule" method="post">
+        {% csrf_token %}
+        Destination:<input type="text" name="destination"><br>
+        Description:<input type="text" name="description"><br>
+        Travel Date From:<input type="text" name="travel_from"><br>
+        Travel Date To:<input type="text" name="travel_to"><br>
+        <input type="submit" name="submit" value="add">
+    </form>
+</body>
+</html>
